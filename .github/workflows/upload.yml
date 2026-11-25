@@ -1,0 +1,83 @@
+name: Upload to OBS
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  debian:
+    name: Debian testing
+    runs-on: ubuntu-latest
+    container: docker.io/library/debian:testing
+    steps:
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y cmake debhelper devscripts desktop-file-utils gettext g++ git ca-certificates
+
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build and test parser
+        run: |
+          cmake -S . -B /tmp/build-core -DPACKAGE_INSTALLER_BUILD_UI=OFF -DBUILD_TESTING=ON
+          cmake --build /tmp/build-core --parallel
+          ctest --test-dir /tmp/build-core --output-on-failure
+
+      - name: Validate desktop entry and Debian version
+        run: |
+          desktop-file-validate lingmo-package-installer.desktop
+          project_version="$(sed -nE 's/^project\(lingmo-package-installer VERSION ([^ )]+).*/\1/p' CMakeLists.txt)"
+          debian_version="$(dpkg-parsechangelog --show-field Version)"
+          test -n "$project_version"
+          case "$debian_version" in
+            "$project_version"+*) ;;
+            *)
+              echo "::error::CMake version $project_version does not match Debian version $debian_version."
+              exit 1
+              ;;
+          esac
+
+      - name: Build source package
+        run: dpkg-buildpackage -S -us -uc -d
+
+      - name: Collect source package files
+        run: |
+          mkdir -p src-tar-output
+          mv ../*.dsc ../*.tar.* src-tar-output/
+
+      - name: Retain source package
+        uses: actions/upload-artifact@v4
+        with:
+          name: lingmo-package-installer-source
+          path: src-tar-output/
+          if-no-files-found: error
+
+      - name: Verify OBS credentials
+        if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
+        env:
+          OBS_USERNAME: ${{ secrets.OBS_USERNAME }}
+          OBS_TOKEN: ${{ secrets.OBS_TOKEN }}
+        run: |
+          if [ -z "$OBS_USERNAME" ] || [ -z "$OBS_TOKEN" ]; then
+            echo "::error::Configure OBS_USERNAME and OBS_TOKEN repository secrets before uploading."
+            exit 1
+          fi
+
+      - name: Upload to OBS
+        if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
+        uses: LingmoOS/action-upload-to-obs@0.0.4
+        with:
+          remove-old-sources: true
+          obs-package-name: lingmo-package-installer
+          obs-project-name: home:LingmoOS
+          obs-user-name: ${{ secrets.OBS_USERNAME }}
+          obs-password: ${{ secrets.OBS_TOKEN }}
+          obs-instance-url: https://api.opensuse.org
+          local-package-dir: ./src-tar-output
