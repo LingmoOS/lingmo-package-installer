@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lingmo-package-installer\n"
+"PO-Revision-Date: 2026-11-25 14:08+0800\n"
+"Last-Translator: Lingmo OS Team <team@lingmo.org>\n"
+"Language-Team: Simplified Chinese\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Lingmo Package Installer"
+msgstr "Lingmo 软件包安装器"
+
+msgid "Application menu"
+msgstr "应用菜单"
+
+msgid "Lingmo OS"
+msgstr "Lingmo OS"
+
+msgid "Drop the app here to install"
+msgstr "将应用拖到这里进行安装"
+
+msgid "The package manager will check dependencies and request authorization."
+msgstr "软件包管理器将检查依赖项，并在需要时请求授权。"
+
+msgid "Open a Debian package to get started"
+msgstr "打开一个 Debian 软件包以开始"
+
+msgid "Double-click a .deb file in the file manager, or launch this app with a package path."
+msgstr "在文件管理器中双击 .deb 文件，或通过软件包路径启动此应用。"
+
+msgid "Checking package"
+msgstr "正在检查软件包"
+
+msgid "Waiting for administrator authorization"
+msgstr "正在等待管理员授权"
+
+msgid "Installing"
+msgstr "正在安装"
+
+msgid "Getting required packages"
+msgstr "正在获取所需软件包"
+
+msgid "Checking dependencies"
+msgstr "正在检查依赖项"
+
+msgid "Unpacking package"
+msgstr "正在解包"
+
+msgid "Configuring package"
+msgstr "正在配置软件包"
+
+msgid "Installing package"
+msgstr "正在安装软件包"
+
+msgid "Finishing installation"
+msgstr "正在完成安装"
+
+msgid "Working with the system package service"
+msgstr "正在连接系统软件包服务"
+
+msgid "Could not continue"
+msgstr "无法继续"
+
+msgid "Installation complete"
+msgstr "安装完成"
+
+msgid "The package was installed successfully."
+msgstr "软件包已成功安装。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "View details"
+msgstr "查看详情"
+
+msgid "No package selected"
+msgstr "未选择软件包"
+
+msgid "Install…"
+msgstr "安装…"
+
+msgid "Package details"
+msgstr "软件包详情"
+
+msgid "Version "
+msgstr "版本 "
+
+msgid "No description is provided."
+msgstr "没有提供描述。"
+
+msgid "Local package · source not verified"
+msgstr "本地软件包 · 来源未经验证"
+
+msgid "Source: "
+msgstr "来源："
+
+msgid "File size: "
+msgstr "文件大小："
+
+msgid "Unavailable"
+msgstr "不可用"
+
+msgid "Package {current} of {total}"
+msgstr "第 {current} 个，共 {total} 个软件包"
+
+msgid "This file is missing or cannot be read."
+msgstr "文件不存在或无法读取。"
+
+msgid "Reading package information"
+msgstr "正在读取软件包信息"
+
+msgid "This does not appear to be a readable Debian package."
+msgstr "无法读取此 Debian 软件包。"
+
+msgid "The package information is incomplete or damaged."
+msgstr "软件包信息不完整或已损坏。"
+
+msgid "The Debian package tools are not available."
+msgstr "找不到 Debian 软件包工具。"
+
+msgid "The system architecture could not be checked."
+msgstr "无法检查系统架构。"
+
+msgid "This package is for a different system architecture."
+msgstr "此软件包不适用于当前系统架构。"
+
+msgid "Package architecture: "
+msgstr "软件包架构："
+
+msgid "System architecture: "
+msgstr "系统架构："
+
+msgid "The current package status could not be checked."
+msgstr "无法检查当前软件包状态。"
+
+msgid "The installed package version could not be checked."
+msgstr "无法检查已安装的软件包版本。"
+
+msgid "This package is already installed."
+msgstr "此软件包已安装。"
+
+msgid "Installed version: "
+msgstr "已安装版本："
+
+msgid "A newer version of this package is already installed."
+msgstr "系统中已安装此软件包的较新版本。"
+
+msgid "Install this package?"
+msgstr "安装此软件包？"
+
+msgid "Install {name} version {version}? The system package service will resolve dependencies and ask before making system changes. A local package may not have a verifiable repository signature."
+msgstr "要安装 {name} {version} 吗？系统软件包服务将处理依赖项，并在更改系统前请求授权。本地软件包可能没有可验证的软件仓库签名。"
+
+msgid "Install"
+msgstr "安装"
+
+msgid "Administrator authorization was not completed."
+msgstr "未完成管理员授权。"
+
+msgid "There is not enough free disk space to install this package."
+msgstr "磁盘空间不足，无法安装此软件包。"
+
+msgid "This package conflicts with software already on the system."
+msgstr "此软件包与系统中已有的软件冲突。"
+
+msgid "Some required software could not be installed."
+msgstr "无法安装某些必需的软件。"
+
+msgid "The required software could not be downloaded from the configured repositories."
+msgstr "无法从已配置的软件仓库下载所需软件。"
+
+msgid "The system package service could not verify this package."
+msgstr "系统软件包服务无法验证此软件包。"
+
+msgid "The package could not be installed. No success was reported by the system package service."
+msgstr "无法安装此软件包。系统软件包服务未报告安装成功。"
+
+msgid "Installation was interrupted."
+msgstr "安装已中断。"
+
+msgid "Cancelling installation"
+msgstr "正在取消安装"
+
+msgid "The system package service could not be started."
+msgstr "无法启动系统软件包服务。"
+
+msgid "Make sure PackageKit and its command-line tools are installed."
+msgstr "请确认已安装 PackageKit 及其命令行工具。"
+
+msgid "Package information"
+msgstr "软件包信息"
+
+msgid "Name: "
+msgstr "名称："
+
+msgid "Version: "
+msgstr "版本："
+
+msgid "Architecture: "
+msgstr "架构："
+
+msgid "Maintainer: "
+msgstr "维护者："
+
+msgid "Not provided"
+msgstr "未提供"
+
+msgid "Local package; repository signature not available"
+msgstr "本地软件包；没有可用的软件仓库签名"
+
+msgid "Package file size: "
+msgstr "软件包文件大小："
+
+msgid "Installed size: "
+msgstr "安装后大小："
+
+msgid "Pre-dependencies: "
+msgstr "预依赖："
+
+msgid "Dependencies: "
+msgstr "依赖："
+
+msgid "Conflicts: "
+msgstr "冲突："
+
+msgid "Installation details"
+msgstr "安装详情"
+
+msgid "Package Installer"
+msgstr "软件包安装器"
+
+msgid "Help"
+msgstr "帮助"
+
+msgid "About Lingmo Package Installer"
+msgstr "关于 Lingmo 软件包安装器"
+
+msgid "Install local Debian software packages with the Lingmo desktop."
+msgstr "使用 Lingmo 桌面安装本地 Debian 软件包。"

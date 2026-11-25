@@ -1,0 +1,63 @@
+lingmo-package-installer (1.0.9+lingmo1) unstable; urgency=medium
+
+  * Use interactive PackageKit D-Bus transactions for local package installs.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 14:08:40 +0800
+
+lingmo-package-installer (1.0.8+lingmo1) unstable; urgency=medium
+
+  * Allow PackageKit's PolicyKit authentication dialog during local installs.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:45:59 +0800
+
+lingmo-package-installer (1.0.7+lingmo1) unstable; urgency=medium
+
+  * Match package and target icon-tile sizes, tidy package details, and remove
+    the separate install button.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:35:25 +0800
+
+lingmo-package-installer (1.0.6+lingmo1) unstable; urgency=medium
+
+  * Keep the action and details buttons from overlapping when both are shown.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:29:54 +0800
+
+lingmo-package-installer (1.0.5+lingmo1) unstable; urgency=medium
+
+  * Center titles against the full window and size icon tiles to one and a
+    half times their icons, keeping labels below.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:27:03 +0800
+
+lingmo-package-installer (1.0.4+lingmo1) unstable; urgency=medium
+
+  * Center the window title and match the package and target pane cards.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:24:12 +0800
+
+lingmo-package-installer (1.0.3+lingmo1) unstable; urgency=medium
+
+  * Use a shared opaque background for the side-by-side package and install
+    content instead of rendering the package pane as a glass sidebar.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:22:42 +0800
+
+lingmo-package-installer (1.0.2+lingmo1) unstable; urgency=medium
+
+  * Keep the package and virtual install target side by side in the main
+    workspace without a navigation sidebar.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 13:20:20 +0800
+
+lingmo-package-installer (1.0.1+lingmo1) unstable; urgency=medium
+
+  * Move package information into the main workspace and remove the sidebar.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 09:43:20 +0800
+
+lingmo-package-installer (1.0.0+lingmo1) unstable; urgency=medium
+
+  * Add the initial native Lingmo OS package installer.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 08:00:00 +0800

@@ -1,0 +1,47 @@
+name: Build and test
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  core:
+    name: Debian testing core and source package
+    runs-on: ubuntu-latest
+    container: docker.io/library/debian:testing
+    steps:
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y cmake g++ debhelper devscripts desktop-file-utils gettext
+
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build and test parser
+        run: |
+          cmake -S . -B /tmp/build-core -DPACKAGE_INSTALLER_BUILD_UI=OFF -DBUILD_TESTING=ON
+          cmake --build /tmp/build-core --parallel
+          ctest --test-dir /tmp/build-core --output-on-failure
+
+      - name: Validate desktop entry and Debian version
+        run: |
+          desktop-file-validate lingmo-package-installer.desktop
+          dpkg-parsechangelog --show-field Version
+
+      - name: Build source package
+        run: dpkg-buildpackage -S -us -uc -d
+
+      - name: Retain source package
+        uses: actions/upload-artifact@v4
+        with:
+          name: lingmo-package-installer-source
+          path: |
+            ../*.dsc
+            ../*.tar.*
+          if-no-files-found: error

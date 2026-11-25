@@ -1,0 +1,21 @@
+Source: lingmo-package-installer
+Section: utils
+Priority: optional
+Maintainer: Lingmo OS Team <team@lingmo.org>
+Build-Depends: cmake,
+               debhelper-compat (= 13),
+               lingmo-sdk-dev,
+               pkg-config
+Standards-Version: 4.7.2
+Homepage: https://github.com/LingmoOS/lingmo-package-installer
+
+Package: lingmo-package-installer
+Architecture: any
+Depends: dpkg,
+         packagekit,
+         lingmo-sdk-dev,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: native Lingmo OS Debian package installer
+ A graphical package installer for local Debian packages, using
+ PackageKit and APT for privileged installation and dependency handling.

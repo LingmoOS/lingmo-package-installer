@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Lingmo Package Installer
+Name[zh_CN]=Lingmo 软件包安装器
+Comment=Install Debian software packages
+Comment[zh_CN]=安装 Debian 软件包
+Exec=lingmo-package-installer %F
+Icon=lingmo-package-installer
+Terminal=false
+Categories=System;PackageManager;
+MimeType=application/vnd.debian.binary-package;application/x-deb;
+StartupNotify=true
+Keywords=Debian;Package;Install;
+Keywords[zh_CN]=Debian;软件包;安装;
