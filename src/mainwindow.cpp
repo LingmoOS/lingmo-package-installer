@@ -4,6 +4,7 @@
 #include "mainwindow.h"
 
 #include "base/i18n.h"
+#include "base/url.h"
 #include "ui/about_dialog.h"
 #include "ui/application.h"
 #include "ui/button.h"
@@ -11,6 +12,7 @@
 #include "ui/color_provider.h"
 #include "ui/dialog_window.h"
 #include "ui/drag.h"
+#include "ui/file_drop_area.h"
 #include "ui/header_button.h"
 #include "ui/icon.h"
 #include "ui/keys.h"
@@ -40,6 +42,15 @@ constexpr double kIconTileSize = kPackageIconSize * 1.5;
 constexpr double kFolderIconSize = kPackageIconSize;
 
 std::string tr(const char* text) { return Lingmo::I18n::tr(text); }
+
+bool isDebPackagePath(const std::filesystem::path& path)
+{
+    std::string extension = path.extension().string();
+    std::transform(extension.begin(), extension.end(), extension.begin(), [](unsigned char ch) {
+        return static_cast<char>(std::tolower(ch));
+    });
+    return extension == ".deb";
+}
 
 std::vector<std::string> lines(std::string text)
 {
@@ -286,7 +297,7 @@ public:
     {
         showReady();
         m_message->setText(tr("Open a Debian package to get started"));
-        m_stage->setText(tr("Double-click a .deb file in the file manager, or launch this app with a package path."));
+        m_stage->setText(tr("Double-click or drop a .deb here, or launch with a package path."));
     }
 
     void showLoading(const std::string& text)
@@ -627,9 +638,24 @@ MainWindow::MainWindow(Application& application, std::vector<std::filesystem::pa
     m_window.setTranslucentSubpixelText(false);
     m_window.addShortcut(ControlModifier, key::letter('q'), [this] { m_application.quit(); });
     m_window.addShortcut(NoModifier, key::F1, [this] { showAbout(); });
-    auto root = std::make_unique<Root>(*this);
-    m_root = root.get();
-    m_window.setContentView(std::move(root));
+    auto dropArea = std::make_unique<FileDropArea>();
+    m_root = dropArea->addChild<Root>(*this);
+    dropArea->filter = [this](const std::string& url) {
+        if (m_operationPending || (m_process && m_process->isRunning()))
+            return false;
+        const auto path = Lingmo::base::url::toLocalFile(url);
+        return path && isDebPackagePath(*path);
+    };
+    dropArea->onDropped = [this](const std::vector<std::string>& urls) {
+        std::vector<std::filesystem::path> packageFiles;
+        packageFiles.reserve(urls.size());
+        for (const std::string& url : urls) {
+            if (const auto path = Lingmo::base::url::toLocalFile(url))
+                packageFiles.emplace_back(*path);
+        }
+        openDroppedPackages(std::move(packageFiles));
+    };
+    m_window.setContentView(std::move(dropArea));
     m_window.onActiveChanged = [this] { if (m_root) m_root->requestPaint(); };
     m_installer->onProgress = [this](const std::string& stage, int percentage) {
         if (m_root)
@@ -678,6 +704,21 @@ void MainWindow::openNextFile()
         m_application.quit();
         return;
     }
+    inspectCurrentFile();
+}
+
+void MainWindow::openDroppedPackages(std::vector<std::filesystem::path> packageFiles)
+{
+    std::erase_if(packageFiles, [](const std::filesystem::path& path) {
+        return !isDebPackagePath(path);
+    });
+    if (packageFiles.empty() || m_operationPending)
+        return;
+
+    m_confirmation.reset();
+    m_packageFiles = std::move(packageFiles);
+    m_currentFile = 0;
+    m_autoInstallDroppedPackages = true;
     inspectCurrentFile();
 }
 
@@ -775,14 +816,14 @@ void MainWindow::queryInstalledPackage()
         }
         if (code != 0) {
             m_currentInstalledVersion.clear();
-            m_root->setPackage(*m_package, m_packageFiles[m_currentFile], m_currentFile, m_packageFiles.size());
+            showCurrentPackage();
             return;
         }
         const std::string output = m_process->standardOutput();
         const size_t separator = output.find('|');
         if (separator == std::string::npos || output.substr(0, separator) != "installed") {
             m_currentInstalledVersion.clear();
-            m_root->setPackage(*m_package, m_packageFiles[m_currentFile], m_currentFile, m_packageFiles.size());
+            showCurrentPackage();
             return;
         }
         m_currentInstalledVersion = output.substr(separator + 1);
@@ -829,12 +870,21 @@ void MainWindow::compareInstalledVersion()
                     tr("Installed version: ") + m_currentInstalledVersion);
                 return;
             }
-            m_root->setPackage(*m_package, m_packageFiles[m_currentFile], m_currentFile, m_packageFiles.size());
+            showCurrentPackage();
         };
         if (!m_process->start("dpkg", {"--compare-versions", m_currentInstalledVersion,
                                       "gt", m_package->version}))
             setError(tr("The installed package version could not be checked."), "Could not start dpkg.");
     });
+}
+
+void MainWindow::showCurrentPackage()
+{
+    if (!m_package || m_currentFile >= m_packageFiles.size())
+        return;
+    m_root->setPackage(*m_package, m_packageFiles[m_currentFile], m_currentFile, m_packageFiles.size());
+    if (m_autoInstallDroppedPackages)
+        packageDropRequested();
 }
 
 void MainWindow::packageDropRequested()
@@ -848,6 +898,7 @@ void MainWindow::packageDropRequested()
     m_confirmation->setCancelText(tr("Cancel"));
     m_confirmation->onAccepted = [this] { startInstall(); };
     m_confirmation->onRejected = [this] {
+        m_autoInstallDroppedPackages = false;
         if (m_root)
             m_root->setPackage(*m_package, m_packageFiles[m_currentFile], m_currentFile, m_packageFiles.size());
     };
@@ -888,7 +939,7 @@ void MainWindow::setError(std::string friendly, std::string details)
 void MainWindow::showMenu(View* anchor)
 {
     m_localMenu = std::make_unique<Menu>();
-    auto* app = m_localMenu->addSubmenu(tr("Package Installer"));
+    auto* app = m_localMenu->addSubmenu(tr("Application"));
     app->addItem(tr("Quit"), [this] { m_application.quit(); }, "Ctrl+Q");
     auto* help = m_localMenu->addSubmenu(tr("Help"));
     help->addItem(tr("About Lingmo Package Installer"), [this] { showAbout(); }, "F1");
@@ -934,7 +985,7 @@ void MainWindow::showAbout()
         m_about = std::make_unique<AboutDialog>(&m_window);
         m_about->setName(tr("Lingmo Package Installer"));
         m_about->setDescription(tr("Install local Debian software packages with the Lingmo desktop."));
-        m_about->setIconSource("lingmo-package-installer");
+        m_about->setIconSource("lingmo-debinstaller");
     }
     m_about->show();
 }
@@ -942,7 +993,7 @@ void MainWindow::showAbout()
 std::vector<GlobalMenu::Entry> MainWindow::menuEntries()
 {
     return {
-        {tr("Package Installer"), {}, {
+        {tr("Application"), {}, {
             {tr("Quit"), [this] { m_application.quit(); }, {}, "Ctrl+Q"},
         }, {}},
         {tr("Help"), {}, {

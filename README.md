@@ -10,6 +10,11 @@ the title is centered against the full window. The target is an action, not a
 filesystem directory, and package files are never copied into `/` or another
 system location.
 
+Local `.deb` files can also be dropped anywhere onto the installer window.
+The installer checks the package and asks for confirmation before starting the
+PackageKit transaction; dropping files does not bypass the confirmation or
+system authorization.
+
 ## Installation backend
 
 The application reads package control metadata with `dpkg-deb`, checks the
@@ -50,6 +55,12 @@ ctest --test-dir build-core --output-on-failure
 
 The desktop entry registers `application/vnd.debian.binary-package` and
 `application/x-deb`; it accepts one or more package paths via `%F`.
+
+## Languages
+
+The interface translations include Arabic, German, Spanish, French, Japanese,
+Korean, Brazilian Portuguese, Russian, Simplified Chinese and Traditional
+Chinese. English remains the source language.
 
 ## Current validation boundary
 

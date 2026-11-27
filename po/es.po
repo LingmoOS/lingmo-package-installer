@@ -1,0 +1,342 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lingmo-package-installer\n"
+"Report-Msgid-Bugs-To: https://github.com/LingmoOS\n"
+"POT-Creation-Date: 2026-11-25 23:14+0800\n"
+"PO-Revision-Date: 2026-11-25 23:23+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/mainwindow.cpp
+msgid "Getting required packages"
+msgstr "Obteniendo los paquetes necesarios"
+
+#: src/mainwindow.cpp
+msgid "Checking dependencies"
+msgstr "Comprobando las dependencias"
+
+#: src/mainwindow.cpp
+msgid "Checking package"
+msgstr "Comprobando el paquete"
+
+#: src/mainwindow.cpp
+msgid "Unpacking package"
+msgstr "Desempaquetando el paquete"
+
+#: src/mainwindow.cpp
+msgid "Configuring package"
+msgstr "Configurando el paquete"
+
+#: src/mainwindow.cpp
+msgid "Installing package"
+msgstr "Instalando el paquete"
+
+#: src/mainwindow.cpp
+msgid "Finishing installation"
+msgstr "Finalizando la instalación"
+
+#: src/mainwindow.cpp
+msgid "Waiting for administrator authorization"
+msgstr "Esperando la autorización del administrador"
+
+#: src/mainwindow.cpp
+msgid "Working with the system package service"
+msgstr "Usando el servicio de paquetes del sistema"
+
+#: src/mainwindow.cpp
+msgid "Administrator authorization was not completed."
+msgstr "No se completó la autorización del administrador."
+
+#: src/mainwindow.cpp
+msgid "There is not enough free disk space to install this package."
+msgstr "No hay suficiente espacio libre en disco para instalar este paquete."
+
+#: src/mainwindow.cpp
+msgid "This package conflicts with software already on the system."
+msgstr "Este paquete entra en conflicto con software ya instalado en el sistema."
+
+#: src/mainwindow.cpp
+msgid "Some required software could not be installed."
+msgstr "No se pudo instalar parte del software necesario."
+
+#: src/mainwindow.cpp
+msgid ""
+"The required software could not be downloaded from the configured "
+"repositories."
+msgstr "No se pudo descargar el software necesario desde los repositorios configurados."
+
+#: src/mainwindow.cpp
+msgid "This package is already installed."
+msgstr "Este paquete ya está instalado."
+
+#: src/mainwindow.cpp
+msgid "The system package service could not verify this package."
+msgstr "El servicio de paquetes del sistema no pudo verificar este paquete."
+
+#: src/mainwindow.cpp
+msgid ""
+"The package could not be installed. No success was reported by the system "
+"package service."
+msgstr "No se pudo instalar el paquete. El servicio de paquetes del sistema no confirmó el éxito."
+
+#: src/mainwindow.cpp lingmo-package-installer.desktop
+msgid "Lingmo Package Installer"
+msgstr "Instalador de paquetes de Lingmo"
+
+#: src/mainwindow.cpp
+msgid "Application menu"
+msgstr "Menú de aplicaciones"
+
+#: src/mainwindow.cpp
+msgid "Lingmo OS"
+msgstr "Lingmo OS"
+
+#: src/mainwindow.cpp
+msgid "Drop the app here to install"
+msgstr "Suelta aquí el icono del paquete para instalarlo"
+
+#: src/mainwindow.cpp
+msgid "View details"
+msgstr "Ver detalles"
+
+#: src/mainwindow.cpp
+msgid "The package manager will check dependencies and request authorization."
+msgstr "El servicio de paquetes del sistema comprobará las dependencias y solicitará autorización si es necesario."
+
+#: src/mainwindow.cpp
+msgid "Open a Debian package to get started"
+msgstr "Abre un paquete Debian para comenzar"
+
+#: src/mainwindow.cpp
+msgid "Double-click or drop a .deb here, or launch with a package path."
+msgstr "Haz doble clic en un archivo .deb o suéltalo aquí; también puedes iniciar la aplicación indicando la ruta del paquete."
+
+#: src/mainwindow.cpp
+msgid "Installing"
+msgstr "Instalando"
+
+#: src/mainwindow.cpp
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/mainwindow.cpp
+msgid "Could not continue"
+msgstr "No se pudo continuar"
+
+#: src/mainwindow.cpp
+msgid "Installation complete"
+msgstr "Instalación completada"
+
+#: src/mainwindow.cpp
+msgid "The package was installed successfully."
+msgstr "El paquete se instaló correctamente."
+
+#: src/mainwindow.cpp
+msgid "Done"
+msgstr "Hecho"
+
+#: src/mainwindow.cpp
+msgid "No package selected"
+msgstr "No hay ningún paquete seleccionado"
+
+#: src/mainwindow.cpp
+msgid "Package details"
+msgstr "Detalles del paquete"
+
+#: src/mainwindow.cpp
+msgid "Version "
+msgstr "Versión "
+
+#: src/mainwindow.cpp
+msgid "No description is provided."
+msgstr "No se proporciona una descripción del paquete."
+
+#: src/mainwindow.cpp
+msgid "Local package · source not verified"
+msgstr "Paquete local · origen sin verificar"
+
+#: src/mainwindow.cpp
+msgid "Source: "
+msgstr "Origen: "
+
+#: src/mainwindow.cpp
+msgid "File size: "
+msgstr "Tamaño del archivo: "
+
+#: src/mainwindow.cpp
+msgid "Unavailable"
+msgstr "No disponible"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid "Package {current} of {total}"
+msgstr "Paquete {current} de {total}"
+
+#: src/mainwindow.cpp
+msgid "Installation was interrupted."
+msgstr "La instalación se interrumpió."
+
+#: src/mainwindow.cpp
+msgid "This file is missing or cannot be read."
+msgstr "El archivo no existe o no se puede leer."
+
+#: src/mainwindow.cpp
+msgid "Reading package information"
+msgstr "Leyendo la información del paquete"
+
+#: src/mainwindow.cpp
+msgid "This does not appear to be a readable Debian package."
+msgstr "Esto no parece ser un paquete Debian legible."
+
+#: src/mainwindow.cpp
+msgid "The package information is incomplete or damaged."
+msgstr "La información del paquete está incompleta o dañada."
+
+#: src/mainwindow.cpp
+msgid "The Debian package tools are not available."
+msgstr "Las herramientas de paquetes Debian no están disponibles."
+
+#: src/mainwindow.cpp
+msgid "The system architecture could not be checked."
+msgstr "No se pudo comprobar la arquitectura del sistema."
+
+#: src/mainwindow.cpp
+msgid "This package is for a different system architecture."
+msgstr "Este paquete es para una arquitectura de sistema diferente."
+
+#: src/mainwindow.cpp
+msgid "Package architecture: "
+msgstr "Arquitectura del paquete: "
+
+#: src/mainwindow.cpp
+msgid "System architecture: "
+msgstr "Arquitectura del sistema: "
+
+#: src/mainwindow.cpp
+msgid "The current package status could not be checked."
+msgstr "No se pudo comprobar el estado actual del paquete."
+
+#: src/mainwindow.cpp
+msgid "The installed package version could not be checked."
+msgstr "No se pudo comprobar la versión del paquete instalado."
+
+#: src/mainwindow.cpp
+msgid "Installed version: "
+msgstr "Versión instalada: "
+
+#: src/mainwindow.cpp
+msgid "A newer version of this package is already installed."
+msgstr "Ya está instalada una versión más reciente de este paquete."
+
+#: src/mainwindow.cpp
+msgid "Install this package?"
+msgstr "¿Instalar este paquete?"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid ""
+"Install {name} version {version}? The system package service will resolve "
+"dependencies and ask before making system changes. A local package may not "
+"have a verifiable repository signature."
+msgstr "¿Instalar {name} versión {version}? El servicio de paquetes del sistema resolverá las dependencias y solicitará autorización antes de realizar cambios en el sistema. Es posible que un paquete local no tenga una firma de repositorio verificable."
+
+#: src/mainwindow.cpp
+msgid "Install"
+msgstr "Instalar"
+
+#: src/mainwindow.cpp
+msgid "The system package service could not be started."
+msgstr "No se pudo iniciar el servicio de paquetes del sistema."
+
+#: src/mainwindow.cpp
+msgid "Make sure PackageKit is running and accessible over the system bus."
+msgstr "Comprueba que PackageKit esté en ejecución y accesible a través del bus del sistema."
+
+#: src/mainwindow.cpp
+msgid "Cancelling installation"
+msgstr "Cancelando la instalación"
+
+#: src/mainwindow.cpp
+msgid "Application"
+msgstr "Aplicación"
+
+#: src/mainwindow.cpp
+msgid "Quit"
+msgstr "Salir"
+
+#: src/mainwindow.cpp
+msgid "Help"
+msgstr "Ayuda"
+
+#: src/mainwindow.cpp
+msgid "About Lingmo Package Installer"
+msgstr "Acerca del instalador de paquetes de Lingmo"
+
+#: src/mainwindow.cpp
+msgid "Package information"
+msgstr "Información del paquete"
+
+#: src/mainwindow.cpp
+msgid "Name: "
+msgstr "Nombre: "
+
+#: src/mainwindow.cpp
+msgid "Version: "
+msgstr "Versión: "
+
+#: src/mainwindow.cpp
+msgid "Architecture: "
+msgstr "Arquitectura: "
+
+#: src/mainwindow.cpp
+msgid "Maintainer: "
+msgstr "Mantenedor: "
+
+#: src/mainwindow.cpp
+msgid "Not provided"
+msgstr "No indicado"
+
+#: src/mainwindow.cpp
+msgid "Local package; repository signature not available"
+msgstr "Paquete local; no hay una firma de repositorio verificable"
+
+#: src/mainwindow.cpp
+msgid "Package file size: "
+msgstr "Tamaño del archivo del paquete: "
+
+#: src/mainwindow.cpp
+msgid "Installed size: "
+msgstr "Tamaño instalado: "
+
+#: src/mainwindow.cpp
+msgid "Pre-dependencies: "
+msgstr "Predependencias: "
+
+#: src/mainwindow.cpp
+msgid "Dependencies: "
+msgstr "Dependencias: "
+
+#: src/mainwindow.cpp
+msgid "Conflicts: "
+msgstr "Conflictos: "
+
+#: src/mainwindow.cpp
+msgid "Installation details"
+msgstr "Detalles de la instalación"
+
+#: src/mainwindow.cpp
+msgid "Install local Debian software packages with the Lingmo desktop."
+msgstr "Instala paquetes de software Debian locales con el escritorio Lingmo."
+
+#: lingmo-package-installer.desktop
+msgid "Install Debian software packages"
+msgstr "Instalar paquetes de software Debian"
+
+#: lingmo-package-installer.desktop
+msgid "Debian;Package;Install;"
+msgstr "Debian;Paquete;Instalar;"

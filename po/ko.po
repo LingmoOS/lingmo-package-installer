@@ -1,0 +1,342 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lingmo-package-installer\n"
+"Report-Msgid-Bugs-To: https://github.com/LingmoOS\n"
+"POT-Creation-Date: 2026-11-25 23:14+0800\n"
+"PO-Revision-Date: 2026-11-25 23:23+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/mainwindow.cpp
+msgid "Getting required packages"
+msgstr "필요한 패키지 가져오는 중"
+
+#: src/mainwindow.cpp
+msgid "Checking dependencies"
+msgstr "의존성 확인 중"
+
+#: src/mainwindow.cpp
+msgid "Checking package"
+msgstr "패키지 확인 중"
+
+#: src/mainwindow.cpp
+msgid "Unpacking package"
+msgstr "패키지 압축 해제 중"
+
+#: src/mainwindow.cpp
+msgid "Configuring package"
+msgstr "패키지 설정 중"
+
+#: src/mainwindow.cpp
+msgid "Installing package"
+msgstr "패키지 설치 중"
+
+#: src/mainwindow.cpp
+msgid "Finishing installation"
+msgstr "설치 마무리 중"
+
+#: src/mainwindow.cpp
+msgid "Waiting for administrator authorization"
+msgstr "관리자 인증 대기 중"
+
+#: src/mainwindow.cpp
+msgid "Working with the system package service"
+msgstr "시스템 패키지 서비스 사용 중"
+
+#: src/mainwindow.cpp
+msgid "Administrator authorization was not completed."
+msgstr "관리자 인증이 완료되지 않았습니다."
+
+#: src/mainwindow.cpp
+msgid "There is not enough free disk space to install this package."
+msgstr "이 패키지를 설치하기에 디스크 여유 공간이 부족합니다."
+
+#: src/mainwindow.cpp
+msgid "This package conflicts with software already on the system."
+msgstr "이 패키지가 시스템에 이미 설치된 소프트웨어와 충돌합니다."
+
+#: src/mainwindow.cpp
+msgid "Some required software could not be installed."
+msgstr "필요한 소프트웨어 일부를 설치할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid ""
+"The required software could not be downloaded from the configured "
+"repositories."
+msgstr "설정된 저장소에서 필요한 소프트웨어를 다운로드할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "This package is already installed."
+msgstr "이 패키지는 이미 설치되어 있습니다."
+
+#: src/mainwindow.cpp
+msgid "The system package service could not verify this package."
+msgstr "시스템 패키지 서비스가 이 패키지를 확인하지 못했습니다."
+
+#: src/mainwindow.cpp
+msgid ""
+"The package could not be installed. No success was reported by the system "
+"package service."
+msgstr "패키지를 설치할 수 없습니다. 시스템 패키지 서비스에서 성공을 보고하지 않았습니다."
+
+#: src/mainwindow.cpp lingmo-package-installer.desktop
+msgid "Lingmo Package Installer"
+msgstr "Lingmo 패키지 설치 프로그램"
+
+#: src/mainwindow.cpp
+msgid "Application menu"
+msgstr "애플리케이션 메뉴"
+
+#: src/mainwindow.cpp
+msgid "Lingmo OS"
+msgstr "Lingmo OS"
+
+#: src/mainwindow.cpp
+msgid "Drop the app here to install"
+msgstr "설치하려면 패키지 아이콘을 여기에 놓으세요"
+
+#: src/mainwindow.cpp
+msgid "View details"
+msgstr "세부 정보 보기"
+
+#: src/mainwindow.cpp
+msgid "The package manager will check dependencies and request authorization."
+msgstr "패키지 관리자가 의존성을 확인하고 인증을 요청합니다."
+
+#: src/mainwindow.cpp
+msgid "Open a Debian package to get started"
+msgstr "Debian 패키지를 열어 시작하세요"
+
+#: src/mainwindow.cpp
+msgid "Double-click or drop a .deb here, or launch with a package path."
+msgstr ".deb 파일을 두 번 클릭하거나 여기에 놓으세요. 또는 패키지 경로를 전달해 실행하세요."
+
+#: src/mainwindow.cpp
+msgid "Installing"
+msgstr "설치 중"
+
+#: src/mainwindow.cpp
+msgid "Cancel"
+msgstr "취소"
+
+#: src/mainwindow.cpp
+msgid "Could not continue"
+msgstr "계속할 수 없음"
+
+#: src/mainwindow.cpp
+msgid "Installation complete"
+msgstr "설치 완료"
+
+#: src/mainwindow.cpp
+msgid "The package was installed successfully."
+msgstr "패키지가 성공적으로 설치되었습니다."
+
+#: src/mainwindow.cpp
+msgid "Done"
+msgstr "완료"
+
+#: src/mainwindow.cpp
+msgid "No package selected"
+msgstr "선택한 패키지 없음"
+
+#: src/mainwindow.cpp
+msgid "Package details"
+msgstr "패키지 세부 정보"
+
+#: src/mainwindow.cpp
+msgid "Version "
+msgstr "버전 "
+
+#: src/mainwindow.cpp
+msgid "No description is provided."
+msgstr "설명이 제공되지 않았습니다."
+
+#: src/mainwindow.cpp
+msgid "Local package · source not verified"
+msgstr "로컬 패키지 · 출처 확인 안 됨"
+
+#: src/mainwindow.cpp
+msgid "Source: "
+msgstr "출처: "
+
+#: src/mainwindow.cpp
+msgid "File size: "
+msgstr "파일 크기: "
+
+#: src/mainwindow.cpp
+msgid "Unavailable"
+msgstr "사용할 수 없음"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid "Package {current} of {total}"
+msgstr "전체 {total}개 중 {current}번째 패키지"
+
+#: src/mainwindow.cpp
+msgid "Installation was interrupted."
+msgstr "설치가 중단되었습니다."
+
+#: src/mainwindow.cpp
+msgid "This file is missing or cannot be read."
+msgstr "파일이 없거나 읽을 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "Reading package information"
+msgstr "패키지 정보 읽는 중"
+
+#: src/mainwindow.cpp
+msgid "This does not appear to be a readable Debian package."
+msgstr "읽을 수 있는 Debian 패키지가 아닌 것 같습니다."
+
+#: src/mainwindow.cpp
+msgid "The package information is incomplete or damaged."
+msgstr "패키지 정보가 불완전하거나 손상되었습니다."
+
+#: src/mainwindow.cpp
+msgid "The Debian package tools are not available."
+msgstr "Debian 패키지 도구를 사용할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "The system architecture could not be checked."
+msgstr "시스템 아키텍처를 확인할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "This package is for a different system architecture."
+msgstr "이 패키지는 다른 시스템 아키텍처용입니다."
+
+#: src/mainwindow.cpp
+msgid "Package architecture: "
+msgstr "패키지 아키텍처: "
+
+#: src/mainwindow.cpp
+msgid "System architecture: "
+msgstr "시스템 아키텍처: "
+
+#: src/mainwindow.cpp
+msgid "The current package status could not be checked."
+msgstr "현재 패키지 상태를 확인할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "The installed package version could not be checked."
+msgstr "설치된 패키지 버전을 확인할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "Installed version: "
+msgstr "설치된 버전: "
+
+#: src/mainwindow.cpp
+msgid "A newer version of this package is already installed."
+msgstr "이 패키지의 새 버전이 이미 설치되어 있습니다."
+
+#: src/mainwindow.cpp
+msgid "Install this package?"
+msgstr "이 패키지를 설치하시겠습니까?"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid ""
+"Install {name} version {version}? The system package service will resolve "
+"dependencies and ask before making system changes. A local package may not "
+"have a verifiable repository signature."
+msgstr "{name} 버전 {version}을(를) 설치하시겠습니까? 시스템 패키지 서비스가 의존성을 해결하고 시스템을 변경하기 전에 승인을 요청합니다. 로컬 패키지에는 확인 가능한 저장소 서명이 없을 수 있습니다."
+
+#: src/mainwindow.cpp
+msgid "Install"
+msgstr "설치"
+
+#: src/mainwindow.cpp
+msgid "The system package service could not be started."
+msgstr "시스템 패키지 서비스를 시작할 수 없습니다."
+
+#: src/mainwindow.cpp
+msgid "Make sure PackageKit is running and accessible over the system bus."
+msgstr "PackageKit이 실행 중이며 시스템 버스에서 접근할 수 있는지 확인하세요."
+
+#: src/mainwindow.cpp
+msgid "Cancelling installation"
+msgstr "설치 취소 중"
+
+#: src/mainwindow.cpp
+msgid "Application"
+msgstr "애플리케이션"
+
+#: src/mainwindow.cpp
+msgid "Quit"
+msgstr "종료"
+
+#: src/mainwindow.cpp
+msgid "Help"
+msgstr "도움말"
+
+#: src/mainwindow.cpp
+msgid "About Lingmo Package Installer"
+msgstr "Lingmo 패키지 설치 프로그램 정보"
+
+#: src/mainwindow.cpp
+msgid "Package information"
+msgstr "패키지 정보"
+
+#: src/mainwindow.cpp
+msgid "Name: "
+msgstr "이름: "
+
+#: src/mainwindow.cpp
+msgid "Version: "
+msgstr "버전: "
+
+#: src/mainwindow.cpp
+msgid "Architecture: "
+msgstr "아키텍처: "
+
+#: src/mainwindow.cpp
+msgid "Maintainer: "
+msgstr "관리자: "
+
+#: src/mainwindow.cpp
+msgid "Not provided"
+msgstr "제공되지 않음"
+
+#: src/mainwindow.cpp
+msgid "Local package; repository signature not available"
+msgstr "로컬 패키지; 사용 가능한 저장소 서명 없음"
+
+#: src/mainwindow.cpp
+msgid "Package file size: "
+msgstr "패키지 파일 크기: "
+
+#: src/mainwindow.cpp
+msgid "Installed size: "
+msgstr "설치 크기: "
+
+#: src/mainwindow.cpp
+msgid "Pre-dependencies: "
+msgstr "선행 의존성: "
+
+#: src/mainwindow.cpp
+msgid "Dependencies: "
+msgstr "의존성: "
+
+#: src/mainwindow.cpp
+msgid "Conflicts: "
+msgstr "충돌: "
+
+#: src/mainwindow.cpp
+msgid "Installation details"
+msgstr "설치 세부 정보"
+
+#: src/mainwindow.cpp
+msgid "Install local Debian software packages with the Lingmo desktop."
+msgstr "Lingmo 데스크톱에서 로컬 Debian 소프트웨어 패키지를 설치합니다."
+
+#: lingmo-package-installer.desktop
+msgid "Install Debian software packages"
+msgstr "Debian 소프트웨어 패키지 설치"
+
+#: lingmo-package-installer.desktop
+msgid "Debian;Package;Install;"
+msgstr "Debian;패키지;설치;"

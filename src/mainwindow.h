@@ -42,7 +42,9 @@ public:
 private:
     class Root;
     void openNextFile();
+    void openDroppedPackages(std::vector<std::filesystem::path> packageFiles);
     void inspectCurrentFile();
+    void showCurrentPackage();
     void queryNativeArchitecture();
     void queryForeignArchitectures();
     void queryInstalledPackage();
@@ -73,6 +75,7 @@ private:
     std::string m_friendlyError;
     std::string m_errorDetails;
     bool m_operationPending = false;
+    bool m_autoInstallDroppedPackages = false;
 };
 
 } // namespace PackageInstaller

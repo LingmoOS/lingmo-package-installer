@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(lingmo-package-installer VERSION 1.0.9 LANGUAGES CXX)
+project(lingmo-package-installer VERSION 1.0.14 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -26,8 +26,6 @@ if(PACKAGE_INSTALLER_BUILD_UI)
     target_link_libraries(lingmo-package-installer PRIVATE package-installer-core Lingmo::SDK)
     target_compile_options(lingmo-package-installer PRIVATE -Wall -Wextra -Wpedantic)
     install(TARGETS lingmo-package-installer RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES data/lingmo-package-installer.svg
-        DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/scalable/apps)
     lingmo_add_translations(lingmo-package-installer SOURCES src DESKTOP_FILES lingmo-package-installer.desktop)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lingmo-package-installer.desktop
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)

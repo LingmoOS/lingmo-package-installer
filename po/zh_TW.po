@@ -1,0 +1,341 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lingmo-package-installer\n"
+"Report-Msgid-Bugs-To: https://github.com/LingmoOS\n"
+"POT-Creation-Date: 2026-11-25 23:14+0800\n"
+"PO-Revision-Date: 2026-11-25 23:23+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/mainwindow.cpp
+msgid "Getting required packages"
+msgstr "正在取得所需套件"
+
+#: src/mainwindow.cpp
+msgid "Checking dependencies"
+msgstr "正在檢查相依性"
+
+#: src/mainwindow.cpp
+msgid "Checking package"
+msgstr "正在檢查套件"
+
+#: src/mainwindow.cpp
+msgid "Unpacking package"
+msgstr "正在解開套件"
+
+#: src/mainwindow.cpp
+msgid "Configuring package"
+msgstr "正在設定套件"
+
+#: src/mainwindow.cpp
+msgid "Installing package"
+msgstr "正在安裝套件"
+
+#: src/mainwindow.cpp
+msgid "Finishing installation"
+msgstr "正在完成安裝"
+
+#: src/mainwindow.cpp
+msgid "Waiting for administrator authorization"
+msgstr "正在等待管理員授權"
+
+#: src/mainwindow.cpp
+msgid "Working with the system package service"
+msgstr "正在使用系統套件服務"
+
+#: src/mainwindow.cpp
+msgid "Administrator authorization was not completed."
+msgstr "尚未完成管理員授權。"
+
+#: src/mainwindow.cpp
+msgid "There is not enough free disk space to install this package."
+msgstr "磁碟空間不足，無法安裝此套件。"
+
+#: src/mainwindow.cpp
+msgid "This package conflicts with software already on the system."
+msgstr "此套件與系統中既有的軟體衝突。"
+
+#: src/mainwindow.cpp
+msgid "Some required software could not be installed."
+msgstr "部分必要軟體無法安裝。"
+
+#: src/mainwindow.cpp
+msgid ""
+"The required software could not be downloaded from the configured "
+"repositories."
+msgstr "無法從已設定的軟體庫下載所需軟體。"
+
+#: src/mainwindow.cpp
+msgid "This package is already installed."
+msgstr "此套件已安裝。"
+
+#: src/mainwindow.cpp
+msgid "The system package service could not verify this package."
+msgstr "系統套件服務無法驗證此套件。"
+
+#: src/mainwindow.cpp
+msgid ""
+"The package could not be installed. No success was reported by the system "
+"package service."
+msgstr "無法安裝此套件。系統套件服務未確認安裝成功。"
+
+#: src/mainwindow.cpp lingmo-package-installer.desktop
+msgid "Lingmo Package Installer"
+msgstr "Lingmo 套件安裝程式"
+
+#: src/mainwindow.cpp
+msgid "Application menu"
+msgstr "應用程式選單"
+
+#: src/mainwindow.cpp
+msgid "Lingmo OS"
+msgstr "Lingmo OS"
+
+#: src/mainwindow.cpp
+msgid "Drop the app here to install"
+msgstr "將套件圖示拖曳至此處以安裝"
+
+#: src/mainwindow.cpp
+msgid "View details"
+msgstr "檢視詳細資訊"
+
+#: src/mainwindow.cpp
+msgid "The package manager will check dependencies and request authorization."
+msgstr "系統套件服務會檢查相依性，並在需要時要求管理員授權。"
+
+#: src/mainwindow.cpp
+msgid "Open a Debian package to get started"
+msgstr "開啟 Debian 套件以開始使用"
+
+#: src/mainwindow.cpp
+msgid "Double-click or drop a .deb here, or launch with a package path."
+msgstr "雙擊或將 .deb 檔案拖曳至此處，也可從命令列傳入套件路徑。"
+
+#: src/mainwindow.cpp
+msgid "Installing"
+msgstr "正在安裝"
+
+#: src/mainwindow.cpp
+msgid "Cancel"
+msgstr "取消"
+
+#: src/mainwindow.cpp
+msgid "Could not continue"
+msgstr "無法繼續"
+
+#: src/mainwindow.cpp
+msgid "Installation complete"
+msgstr "安裝完成"
+
+#: src/mainwindow.cpp
+msgid "The package was installed successfully."
+msgstr "套件已成功安裝。"
+
+#: src/mainwindow.cpp
+msgid "Done"
+msgstr "完成"
+
+#: src/mainwindow.cpp
+msgid "No package selected"
+msgstr "未選取套件"
+
+#: src/mainwindow.cpp
+msgid "Package details"
+msgstr "套件詳細資訊"
+
+#: src/mainwindow.cpp
+msgid "Version "
+msgstr "版本 "
+
+#: src/mainwindow.cpp
+msgid "No description is provided."
+msgstr "未提供套件描述。"
+
+#: src/mainwindow.cpp
+msgid "Local package · source not verified"
+msgstr "本機套件 · 來源未經驗證"
+
+#: src/mainwindow.cpp
+msgid "Source: "
+msgstr "來源："
+
+#: src/mainwindow.cpp
+msgid "File size: "
+msgstr "檔案大小："
+
+#: src/mainwindow.cpp
+msgid "Unavailable"
+msgstr "無法使用"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid "Package {current} of {total}"
+msgstr "第 {current} 個，共 {total} 個套件"
+
+#: src/mainwindow.cpp
+msgid "Installation was interrupted."
+msgstr "安裝已中斷。"
+
+#: src/mainwindow.cpp
+msgid "This file is missing or cannot be read."
+msgstr "檔案不存在或無法讀取。"
+
+#: src/mainwindow.cpp
+msgid "Reading package information"
+msgstr "正在讀取套件資訊"
+
+#: src/mainwindow.cpp
+msgid "This does not appear to be a readable Debian package."
+msgstr "這似乎不是可讀取的 Debian 套件。"
+
+#: src/mainwindow.cpp
+msgid "The package information is incomplete or damaged."
+msgstr "套件資訊不完整或已損毀。"
+
+#: src/mainwindow.cpp
+msgid "The Debian package tools are not available."
+msgstr "Debian 套件處理工具無法使用。"
+
+#: src/mainwindow.cpp
+msgid "The system architecture could not be checked."
+msgstr "無法檢查系統架構。"
+
+#: src/mainwindow.cpp
+msgid "This package is for a different system architecture."
+msgstr "此套件不適用於目前的系統架構。"
+
+#: src/mainwindow.cpp
+msgid "Package architecture: "
+msgstr "套件架構："
+
+#: src/mainwindow.cpp
+msgid "System architecture: "
+msgstr "系統架構："
+
+#: src/mainwindow.cpp
+msgid "The current package status could not be checked."
+msgstr "無法查詢此套件的安裝狀態。"
+
+#: src/mainwindow.cpp
+msgid "The installed package version could not be checked."
+msgstr "無法檢查已安裝的套件版本。"
+
+#: src/mainwindow.cpp
+msgid "Installed version: "
+msgstr "已安裝版本："
+
+#: src/mainwindow.cpp
+msgid "A newer version of this package is already installed."
+msgstr "系統中已安裝此套件的較新版本。"
+
+#: src/mainwindow.cpp
+msgid "Install this package?"
+msgstr "是否安裝此套件？"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid ""
+"Install {name} version {version}? The system package service will resolve "
+"dependencies and ask before making system changes. A local package may not "
+"have a verifiable repository signature."
+msgstr "要安裝 {name} {version} 嗎？系統套件服務會處理相依性，並在變更系統前要求授權。本機套件可能沒有可驗證的軟體庫簽章。"
+
+#: src/mainwindow.cpp
+msgid "Install"
+msgstr "安裝"
+
+#: src/mainwindow.cpp
+msgid "The system package service could not be started."
+msgstr "無法啟動系統套件服務。"
+
+#: src/mainwindow.cpp
+msgid "Make sure PackageKit is running and accessible over the system bus."
+msgstr "請確認 PackageKit 已啟動，且可透過系統匯流排存取。"
+
+#: src/mainwindow.cpp
+msgid "Cancelling installation"
+msgstr "正在取消安裝"
+
+#: src/mainwindow.cpp
+msgid "Application"
+msgstr "應用程式"
+
+#: src/mainwindow.cpp
+msgid "Quit"
+msgstr "結束"
+
+#: src/mainwindow.cpp
+msgid "Help"
+msgstr "說明"
+
+#: src/mainwindow.cpp
+msgid "About Lingmo Package Installer"
+msgstr "關於 Lingmo 套件安裝程式"
+
+#: src/mainwindow.cpp
+msgid "Package information"
+msgstr "套件資訊"
+
+#: src/mainwindow.cpp
+msgid "Name: "
+msgstr "名稱："
+
+#: src/mainwindow.cpp
+msgid "Version: "
+msgstr "版本："
+
+#: src/mainwindow.cpp
+msgid "Architecture: "
+msgstr "架構："
+
+#: src/mainwindow.cpp
+msgid "Maintainer: "
+msgstr "維護者："
+
+#: src/mainwindow.cpp
+msgid "Not provided"
+msgstr "未提供"
+
+#: src/mainwindow.cpp
+msgid "Local package; repository signature not available"
+msgstr "本機套件；沒有可驗證的軟體庫簽章"
+
+#: src/mainwindow.cpp
+msgid "Package file size: "
+msgstr "套件檔案大小："
+
+#: src/mainwindow.cpp
+msgid "Installed size: "
+msgstr "安裝後大小："
+
+#: src/mainwindow.cpp
+msgid "Pre-dependencies: "
+msgstr "預先相依套件："
+
+#: src/mainwindow.cpp
+msgid "Dependencies: "
+msgstr "相依套件："
+
+#: src/mainwindow.cpp
+msgid "Conflicts: "
+msgstr "衝突："
+
+#: src/mainwindow.cpp
+msgid "Installation details"
+msgstr "安裝詳細資訊"
+
+#: src/mainwindow.cpp
+msgid "Install local Debian software packages with the Lingmo desktop."
+msgstr "使用 Lingmo 桌面安裝本機 Debian 軟體套件。"
+
+#: lingmo-package-installer.desktop
+msgid "Install Debian software packages"
+msgstr "安裝 Debian 軟體套件"
+
+#: lingmo-package-installer.desktop
+msgid "Debian;Package;Install;"
+msgstr "Debian;套件;安裝;"

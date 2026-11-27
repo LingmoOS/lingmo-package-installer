@@ -1,3 +1,34 @@
+lingmo-package-installer (1.0.14+lingmo1) unstable; urgency=medium
+
+  * Require SDK 5.1.6 for builds and runtime to match the current SDK ABI.
+
+ -- Lingmo OS Team <team@lingmo.org>  Sat, 28 Nov 2026 03:55:00 +0800
+
+lingmo-package-installer (1.0.13+lingmo1) unstable; urgency=medium
+
+  * Add complete interface translations for nine additional languages.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 23:23:00 +0800
+
+lingmo-package-installer (1.0.12+lingmo1) unstable; urgency=medium
+
+  * Complete and refine the Simplified Chinese translations.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 23:14:00 +0800
+
+lingmo-package-installer (1.0.11+lingmo1) unstable; urgency=medium
+
+  * Use the Lingmo deb-installer theme icon instead of the bundled artwork.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 22:51:20 +0800
+
+lingmo-package-installer (1.0.10+lingmo1) unstable; urgency=medium
+
+  * Remove the duplicate application menu title and accept dropped Debian
+    packages on the installer window.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 25 Nov 2026 22:47:00 +0800
+
 lingmo-package-installer (1.0.9+lingmo1) unstable; urgency=medium
 
   * Use interactive PackageKit D-Bus transactions for local package installs.

@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lingmo-package-installer\n"
+"Report-Msgid-Bugs-To: https://github.com/LingmoOS\n"
+"POT-Creation-Date: 2026-11-25 23:14+0800\n"
+"PO-Revision-Date: 2026-11-25 23:23+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/mainwindow.cpp
+msgid "Getting required packages"
+msgstr "Получение необходимых пакетов"
+
+#: src/mainwindow.cpp
+msgid "Checking dependencies"
+msgstr "Проверка зависимостей"
+
+#: src/mainwindow.cpp
+msgid "Checking package"
+msgstr "Проверка пакета"
+
+#: src/mainwindow.cpp
+msgid "Unpacking package"
+msgstr "Распаковка пакета"
+
+#: src/mainwindow.cpp
+msgid "Configuring package"
+msgstr "Настройка пакета"
+
+#: src/mainwindow.cpp
+msgid "Installing package"
+msgstr "Установка пакета"
+
+#: src/mainwindow.cpp
+msgid "Finishing installation"
+msgstr "Завершение установки"
+
+#: src/mainwindow.cpp
+msgid "Waiting for administrator authorization"
+msgstr "Ожидание подтверждения администратора"
+
+#: src/mainwindow.cpp
+msgid "Working with the system package service"
+msgstr "Использование системной службы пакетов"
+
+#: src/mainwindow.cpp
+msgid "Administrator authorization was not completed."
+msgstr "Подтверждение администратора не было завершено."
+
+#: src/mainwindow.cpp
+msgid "There is not enough free disk space to install this package."
+msgstr "Недостаточно свободного места на диске для установки этого пакета."
+
+#: src/mainwindow.cpp
+msgid "This package conflicts with software already on the system."
+msgstr "Этот пакет конфликтует с программами, уже установленными в системе."
+
+#: src/mainwindow.cpp
+msgid "Some required software could not be installed."
+msgstr "Не удалось установить некоторые необходимые программы."
+
+#: src/mainwindow.cpp
+msgid ""
+"The required software could not be downloaded from the configured "
+"repositories."
+msgstr "Не удалось загрузить необходимые программы из настроенных репозиториев."
+
+#: src/mainwindow.cpp
+msgid "This package is already installed."
+msgstr "Этот пакет уже установлен."
+
+#: src/mainwindow.cpp
+msgid "The system package service could not verify this package."
+msgstr "Системная служба пакетов не смогла проверить этот пакет."
+
+#: src/mainwindow.cpp
+msgid ""
+"The package could not be installed. No success was reported by the system "
+"package service."
+msgstr "Не удалось установить пакет. Системная служба пакетов не подтвердила успешную установку."
+
+#: src/mainwindow.cpp lingmo-package-installer.desktop
+msgid "Lingmo Package Installer"
+msgstr "Установщик пакетов Lingmo"
+
+#: src/mainwindow.cpp
+msgid "Application menu"
+msgstr "Меню приложений"
+
+#: src/mainwindow.cpp
+msgid "Lingmo OS"
+msgstr "Lingmo OS"
+
+#: src/mainwindow.cpp
+msgid "Drop the app here to install"
+msgstr "Перетащите сюда значок пакета, чтобы установить его"
+
+#: src/mainwindow.cpp
+msgid "View details"
+msgstr "Подробнее"
+
+#: src/mainwindow.cpp
+msgid "The package manager will check dependencies and request authorization."
+msgstr "Системная служба пакетов проверит зависимости и при необходимости запросит подтверждение."
+
+#: src/mainwindow.cpp
+msgid "Open a Debian package to get started"
+msgstr "Откройте пакет Debian, чтобы начать"
+
+#: src/mainwindow.cpp
+msgid "Double-click or drop a .deb here, or launch with a package path."
+msgstr "Дважды щёлкните файл .deb или перетащите его сюда. Также можно запустить приложение, указав путь к пакету."
+
+#: src/mainwindow.cpp
+msgid "Installing"
+msgstr "Установка"
+
+#: src/mainwindow.cpp
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/mainwindow.cpp
+msgid "Could not continue"
+msgstr "Не удалось продолжить"
+
+#: src/mainwindow.cpp
+msgid "Installation complete"
+msgstr "Установка завершена"
+
+#: src/mainwindow.cpp
+msgid "The package was installed successfully."
+msgstr "Пакет успешно установлен."
+
+#: src/mainwindow.cpp
+msgid "Done"
+msgstr "Готово"
+
+#: src/mainwindow.cpp
+msgid "No package selected"
+msgstr "Пакет не выбран"
+
+#: src/mainwindow.cpp
+msgid "Package details"
+msgstr "Сведения о пакете"
+
+#: src/mainwindow.cpp
+msgid "Version "
+msgstr "Версия "
+
+#: src/mainwindow.cpp
+msgid "No description is provided."
+msgstr "Описание пакета отсутствует."
+
+#: src/mainwindow.cpp
+msgid "Local package · source not verified"
+msgstr "Локальный пакет · источник не проверен"
+
+#: src/mainwindow.cpp
+msgid "Source: "
+msgstr "Источник: "
+
+#: src/mainwindow.cpp
+msgid "File size: "
+msgstr "Размер файла: "
+
+#: src/mainwindow.cpp
+msgid "Unavailable"
+msgstr "Недоступно"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid "Package {current} of {total}"
+msgstr "Пакет {current} из {total}"
+
+#: src/mainwindow.cpp
+msgid "Installation was interrupted."
+msgstr "Установка прервана."
+
+#: src/mainwindow.cpp
+msgid "This file is missing or cannot be read."
+msgstr "Файл отсутствует или недоступен для чтения."
+
+#: src/mainwindow.cpp
+msgid "Reading package information"
+msgstr "Чтение сведений о пакете"
+
+#: src/mainwindow.cpp
+msgid "This does not appear to be a readable Debian package."
+msgstr "Похоже, это нечитаемый пакет Debian."
+
+#: src/mainwindow.cpp
+msgid "The package information is incomplete or damaged."
+msgstr "Сведения о пакете неполны или повреждены."
+
+#: src/mainwindow.cpp
+msgid "The Debian package tools are not available."
+msgstr "Инструменты для работы с пакетами Debian недоступны."
+
+#: src/mainwindow.cpp
+msgid "The system architecture could not be checked."
+msgstr "Не удалось проверить архитектуру системы."
+
+#: src/mainwindow.cpp
+msgid "This package is for a different system architecture."
+msgstr "Этот пакет предназначен для другой архитектуры системы."
+
+#: src/mainwindow.cpp
+msgid "Package architecture: "
+msgstr "Архитектура пакета: "
+
+#: src/mainwindow.cpp
+msgid "System architecture: "
+msgstr "Архитектура системы: "
+
+#: src/mainwindow.cpp
+msgid "The current package status could not be checked."
+msgstr "Не удалось проверить текущее состояние пакета."
+
+#: src/mainwindow.cpp
+msgid "The installed package version could not be checked."
+msgstr "Не удалось проверить версию установленного пакета."
+
+#: src/mainwindow.cpp
+msgid "Installed version: "
+msgstr "Установленная версия: "
+
+#: src/mainwindow.cpp
+msgid "A newer version of this package is already installed."
+msgstr "Уже установлена более новая версия этого пакета."
+
+#: src/mainwindow.cpp
+msgid "Install this package?"
+msgstr "Установить этот пакет?"
+
+#: src/mainwindow.cpp
+#, python-brace-format
+msgid ""
+"Install {name} version {version}? The system package service will resolve "
+"dependencies and ask before making system changes. A local package may not "
+"have a verifiable repository signature."
+msgstr "Установить {name} версии {version}? Системная служба пакетов разрешит зависимости и запросит подтверждение перед изменением системы. У локального пакета может отсутствовать проверяемая подпись репозитория."
+
+#: src/mainwindow.cpp
+msgid "Install"
+msgstr "Установить"
+
+#: src/mainwindow.cpp
+msgid "The system package service could not be started."
+msgstr "Не удалось запустить системную службу пакетов."
+
+#: src/mainwindow.cpp
+msgid "Make sure PackageKit is running and accessible over the system bus."
+msgstr "Убедитесь, что PackageKit запущен и доступен через системную шину."
+
+#: src/mainwindow.cpp
+msgid "Cancelling installation"
+msgstr "Отмена установки"
+
+#: src/mainwindow.cpp
+msgid "Application"
+msgstr "Приложение"
+
+#: src/mainwindow.cpp
+msgid "Quit"
+msgstr "Выход"
+
+#: src/mainwindow.cpp
+msgid "Help"
+msgstr "Справка"
+
+#: src/mainwindow.cpp
+msgid "About Lingmo Package Installer"
+msgstr "О приложении «Установщик пакетов Lingmo»"
+
+#: src/mainwindow.cpp
+msgid "Package information"
+msgstr "Сведения о пакете"
+
+#: src/mainwindow.cpp
+msgid "Name: "
+msgstr "Название: "
+
+#: src/mainwindow.cpp
+msgid "Version: "
+msgstr "Версия: "
+
+#: src/mainwindow.cpp
+msgid "Architecture: "
+msgstr "Архитектура: "
+
+#: src/mainwindow.cpp
+msgid "Maintainer: "
+msgstr "Сопровождающий: "
+
+#: src/mainwindow.cpp
+msgid "Not provided"
+msgstr "Не указано"
+
+#: src/mainwindow.cpp
+msgid "Local package; repository signature not available"
+msgstr "Локальный пакет; проверяемая подпись репозитория недоступна"
+
+#: src/mainwindow.cpp
+msgid "Package file size: "
+msgstr "Размер файла пакета: "
+
+#: src/mainwindow.cpp
+msgid "Installed size: "
+msgstr "Размер после установки: "
+
+#: src/mainwindow.cpp
+msgid "Pre-dependencies: "
+msgstr "Предварительные зависимости: "
+
+#: src/mainwindow.cpp
+msgid "Dependencies: "
+msgstr "Зависимости: "
+
+#: src/mainwindow.cpp
+msgid "Conflicts: "
+msgstr "Конфликты: "
+
+#: src/mainwindow.cpp
+msgid "Installation details"
+msgstr "Сведения об установке"
+
+#: src/mainwindow.cpp
+msgid "Install local Debian software packages with the Lingmo desktop."
+msgstr "Устанавливайте локальные пакеты Debian в среде рабочего стола Lingmo."
+
+#: lingmo-package-installer.desktop
+msgid "Install Debian software packages"
+msgstr "Установка пакетов Debian"
+
+#: lingmo-package-installer.desktop
+msgid "Debian;Package;Install;"
+msgstr "Debian;Пакет;Установка;"

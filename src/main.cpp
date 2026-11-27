@@ -21,7 +21,7 @@ int main(int argc, char** argv)
             continue;
         }
         if (!positionalOnly && (std::strcmp(argv[i], "--version") == 0 || std::strcmp(argv[i], "-v") == 0)) {
-            std::puts("lingmo-package-installer 1.0.0");
+            std::puts("lingmo-package-installer 1.0.13");
             return 0;
         }
         if (!positionalOnly && (std::strcmp(argv[i], "--help") == 0 || std::strcmp(argv[i], "-h") == 0)) {
